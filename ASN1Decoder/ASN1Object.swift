@@ -25,7 +25,7 @@
 import Foundation
 
 
-public class ASN1Object : CustomStringConvertible {
+open class ASN1Object : CustomStringConvertible {
     
     init() {
     }

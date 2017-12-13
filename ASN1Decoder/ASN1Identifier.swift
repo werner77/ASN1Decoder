@@ -24,7 +24,7 @@
 import Foundation
 
 
-class ASN1Identifier : CustomStringConvertible {
+public class ASN1Identifier : CustomStringConvertible {
     
     enum Class : UInt8 {
         case universal = 0x00
@@ -93,7 +93,7 @@ class ASN1Identifier : CustomStringConvertible {
         return TagNumber(rawValue: rawValue & 0x1F) ?? .endOfContent
     }
     
-    var description: String {
+    public var description: String {
         if typeClass() == .universal {
             return String(describing: tagNumber())
         }

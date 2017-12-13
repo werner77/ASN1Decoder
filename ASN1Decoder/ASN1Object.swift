@@ -30,15 +30,15 @@ open class ASN1Object : CustomStringConvertible {
     init() {
     }
     
-    var rawValue: Data?
+    public internal(set) var rawValue: Data?
     
-    var identifier: ASN1Identifier?
+    public internal(set) var identifier: ASN1Identifier?
     
-    var value: Any?
+    public internal(set) var value: Any?
     
-    var sub: [ASN1Object]?
+    public internal(set) var sub: [ASN1Object]?
     
-    weak var parent: ASN1Object?
+    public internal(set) weak var parent: ASN1Object?
     
     
     func sub(_ index: Int) -> ASN1Object? {
